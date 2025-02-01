@@ -1,0 +1,27 @@
+# O comportamento do Rubocop pode ser controlado através do .rubocop.yml
+# arquivo de configuração. Torna possível ativar/desativar
+# certos policiais (cheques) e alterar seu comportamento se aceitarem
+# Quaisquer parâmetros. O arquivo pode ser colocado em sua casa
+# diretório ou em algum diretório do projeto.
+#
+# Rubocop começará a procurar o arquivo de configuração no diretório
+# Onde está o arquivo inspecionado e continue até o diretório raiz.
+#
+# Consulte https://docs.rubocop.org/rubocop/configuration
+
+AllCops:
+  NewCops: enable
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+
+Style/FrozenStringLiteralComment:
+  EnforcedStyle: never
+
+# Desabilita cops relacionados a comentários
+Layout/LeadingCommentSpace:
+  Enabled: false
+Style/InlineComment:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
